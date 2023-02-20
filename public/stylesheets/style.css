@@ -1,0 +1,95 @@
+body {
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: whitesmoke;
+  height: 15vh;
+}
+
+navigation {
+  display: flex;
+  justify-content: center;
+  height: 5vh;
+}
+
+.content {
+  margin: auto;
+  width: 80%;
+  height: 65%;
+  min-height: 65vh;
+}
+
+.links {
+  text-decoration: none;
+  color: red;
+}
+
+.actions {
+  margin-bottom: 1em;
+}
+
+table {
+  border: 2px solid #FFFFFF;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border: 2px solid #333333;
+}
+table td, table th {
+  border: 1px solid #333333;
+  padding: 3px 4px;
+}
+table td:nth-child(even) {
+  background: #EBEBEB;
+}
+
+/* Errors */
+.errors {
+  display: inline-block;
+  border: 2px solid red;
+  color: red;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.errors ul {
+  margin-bottom: 0;
+  padding-left: 1em;
+}
+
+/* Forms */
+dl {
+  clear: both;
+  overflow: hidden;
+  margin: 0.5em 0;
+}
+
+dt {
+  float: left;
+  font-weight: bold;
+  width: 125px;
+}
+
+dd {
+  float: left;
+  margin-left: 1em;
+}
+
+#operations {
+  clear: both;
+  margin: 1em 0 1em 75px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: whitesmoke;
+  height: 12vh;
+}/*# sourceMappingURL=style.css.map */
