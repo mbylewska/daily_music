@@ -21,14 +21,14 @@ include(SHARED_PATH . '/public_header.php'); ?>
     <!-- YouTube -->
     <div id="youtube">
         <h2><a href="<?php echo $song['link_yt']; ?>">You tube</a></h2>
-        <iframe class="media-frame" width="250" height="150" src="http://www.youtube.com/embed/<?php echo $link_yt; ?>\" frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+        <iframe class="media-frame" width="250" height="150" src="http://www.youtube.com/embed/<?php echo h($link_yt); ?>\" frameborder="0" allowfullscreen="" loading="lazy"></iframe>
 
     </div>
 
     <!-- Spotify -->
     <div id="Spotify">
         <h2><a href="<?php echo $song['link_spotify']; ?>">Spotify</a></h2>
-        <iframe class="media-frame" width="250" height="150" src="<?php echo $song['link_spotify']; ?>" frameBorder="0" allowfullscreen="" loading="lazy"></iframe>
+        <iframe class="media-frame" width="250" height="150" src="<?php echo h($song['link_spotify']); ?>" frameBorder="0" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <!-- Apple -->
@@ -43,10 +43,11 @@ include(SHARED_PATH . '/public_header.php'); ?>
 
 <div class="content">
 
-    <h2><?php echo $song['title']; ?></h2>
-    <h3><?php echo $song['artist']; ?></h3>
+    <h2><?php echo h($song['title']); ?></h2>
+    <h3><?php echo h($song['artist']); ?></h3>
     <article>
-        <p> <?php echo $song['content']; ?></p>
+        <p> <?php echo nl2br(h($song['content'])); // nl2br($string) - converts all new lines into <br /> 
+            ?></p>
     </article>
 </div>
 
