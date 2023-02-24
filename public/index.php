@@ -1,16 +1,22 @@
 <?php require_once('../private/initialize.php');
 
-//$today = date("Y-m-d");
-$today = '2023-02-19';
+$today = date("Y-m-d");
+//$today = '2023-02-19';
+$x = 1;
+
 //echo $today;
 
 if (isset($today)) {
     $song_date = $today;
     $song = find_song_by_date($song_date);
-    $link_yt = embed_youtube($song['link_yt'])[1];
-    if (!$song) {
-        redirect_to(url_for('/index.php'));
+
+    // if (!$song) {
+    while (!$song) {
+        $day_before = date("Y-m-d", strtotime("-" . $x . " day"));
+        $song = find_song_by_date($day_before);
+        $x += 1;
     }
+    $link_yt = embed_youtube($song['link_yt'])[1];
 }
 
 include(SHARED_PATH . '/public_header.php'); ?>
